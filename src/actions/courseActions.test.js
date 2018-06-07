@@ -35,7 +35,7 @@ describe('Async Actions', () => {
         const expectedActions = [
             {type: actionTypes.BEGIN_AJAX_CALL},
             {type: actionTypes.LOAD_COURSES, body:{courses:[course]}}
-        ]
+        ];
 
         const store = mockStore({courses: []}, expectedActions);
         store.dispatch(courseActions.loadCourses()).then(() => {
